@@ -1,6 +1,6 @@
-﻿namespace AdventOfCode2022.Day01;
+﻿namespace AdventOfCode2022;
 
-public class DayOne
+public class Day1
 {
     public static int GetMaxCalories(string inputFile, int numberOfElvesToUse = 1) =>
         inputFile

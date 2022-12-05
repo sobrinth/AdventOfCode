@@ -1,10 +1,6 @@
-﻿namespace AdventOfCode2022.Test.Day01;
+﻿namespace AdventOfCode2022.Test;
 
-using AdventOfCode2022.Day01;
-using FluentAssertions;
-using Xunit.Abstractions;
-
-public class DayOneTest
+public class Day1Test
 {
     private const string Teststring = """
                         1000
@@ -25,7 +21,7 @@ public class DayOneTest
 
     private readonly ITestOutputHelper _testOutputHelper;
 
-    public DayOneTest(ITestOutputHelper testOutputHelper)
+    public Day1Test(ITestOutputHelper testOutputHelper)
     {
         _testOutputHelper = testOutputHelper;
     }
@@ -33,7 +29,7 @@ public class DayOneTest
     [Fact]
     private void CalculatesExampleListPartOne()
     {
-        var maxCalories = DayOne.GetMaxCalories(Teststring);
+        var maxCalories = Day1.GetMaxCalories(Teststring);
 
         maxCalories.Should().Be(24000);
     }
@@ -41,24 +37,24 @@ public class DayOneTest
     [Fact]
     private void CalculatesExampleListPartTwo()
     {
-        var maxCalories = DayOne.GetMaxCalories(Teststring, 3);
+        var maxCalories = Day1.GetMaxCalories(Teststring, 3);
 
         maxCalories.Should().Be(45000);
     }
 
     [Fact]
-    private void CalculatesSolutionForDayOnePartOne()
+    private void CalculatesSolutionForPartOne()
     {
-        var elfList = File.ReadAllText("./puzzledata/day01.txt");
-        var maxCalories = DayOne.GetMaxCalories(elfList);
+        var elfList = File.ReadAllText("./puzzledata/day1.txt");
+        var maxCalories = Day1.GetMaxCalories(elfList);
         _testOutputHelper.WriteLine(maxCalories.ToString());
     }
     
     [Fact]
-    private void CalculatesSolutionForDayOnePartTwo()
+    private void CalculatesSolutionForPartTwo()
     {
-        var elfList = File.ReadAllText("./puzzledata/day01.txt");
-        var maxCalories = DayOne.GetMaxCalories(elfList, 3);
+        var elfList = File.ReadAllText("./puzzledata/day1.txt");
+        var maxCalories = Day1.GetMaxCalories(elfList, 3);
         _testOutputHelper.WriteLine(maxCalories.ToString());
     }
 }

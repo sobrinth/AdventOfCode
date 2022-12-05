@@ -1,8 +1,5 @@
 ﻿namespace AdventOfCode2022.Test;
 
-using FluentAssertions;
-using Xunit.Abstractions;
-
 public class Day2Test
 {
 
