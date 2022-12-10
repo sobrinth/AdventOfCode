@@ -30,6 +30,11 @@
     <None Update="puzzledata\*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>  
+  <ItemGroup>
+    <None Update="exampledata\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
