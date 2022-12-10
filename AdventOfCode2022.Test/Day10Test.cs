@@ -37,11 +37,38 @@ public class Day10Test
         result.Should().Be(13860);
     }
     
+    
+    [Fact]
+    private void CalculatesSolutionForPartOneV2()
+    {
+        var input = File.ReadAllLines("./puzzledata/day10.txt");
+        var result = Day10.PartOneV2(input);
+        _testOutputHelper.WriteLine(result.ToString());
+        result.Should().Be(13860);
+    }
+    
     [Fact]
     private void CalculatesSolutionForPartTwo()
     {
         var input = File.ReadAllLines("./puzzledata/day10.txt");
         var result = Day10.PartTwo(input);
-        _testOutputHelper.WriteLine(result);
+        var lines = result.Chunk(40).Select(x => string.Join("", x)).ToArray();
+        foreach (var line in lines)
+        {
+            _testOutputHelper.WriteLine(line);
+
+        }
+    }
+    [Fact]
+    private void CalculatesSolutionForPartTwoV2()
+    {
+        var input = File.ReadAllLines("./puzzledata/day10.txt");
+        var result = Day10.PartTwoV2(input);
+        var lines = result.Chunk(40).Select(x => string.Join("", x)).ToArray();
+        foreach (var line in lines)
+        {
+            _testOutputHelper.WriteLine(line);
+
+        }
     }
 }
